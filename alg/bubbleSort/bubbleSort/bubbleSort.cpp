@@ -1,3 +1,8 @@
+//ц╟ещеепР
+/*
+ *
+ */
+
 #include <iostream>
 using namespace std;
 
