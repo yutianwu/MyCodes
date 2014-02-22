@@ -1,7 +1,7 @@
 /*
 	此类讲了listview的使用
 */
-
+ 
 package com.yutian.locate;
 
 import java.util.ArrayList;
