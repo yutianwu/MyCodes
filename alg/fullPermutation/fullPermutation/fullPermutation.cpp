@@ -9,6 +9,7 @@
 */
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int sum = 0;
@@ -32,6 +33,12 @@ void perm(int *A, int k, int m) {
 			swap(&A[k], &A[j]);
 		}
 	}
+}
+
+void testV(vector<int> &num) {
+	cout<<num[1];
+	vector<int> ivec2(num);
+	cout<<num.size()<<endl;
 }
 
 void main() {
