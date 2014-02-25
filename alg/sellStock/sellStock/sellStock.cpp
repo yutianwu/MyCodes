@@ -29,7 +29,7 @@ If you were only permitted to complete at most one transaction (ie, buy one and 
 
 using namespace std;
 
-int finMaxCrossSubarray(int *A, int low, int mid, int high) {
+int findMaxCrossSubarray(int *A, int low, int mid, int high) {
 	int leftSum = A[mid];
 	int sum = A[mid];
 	for (int i=mid-1; i>=low; i--) {
@@ -58,7 +58,7 @@ int findMaxSubarray(int *A, int low, int high) {
 		int mid = (low+high)/2;
 		int leftSum = findMaxSubarray(A, low, mid);
 		int rightSum = findMaxSubarray(A, mid+1, high);
-		int crossSum = finMaxCrossSubarray(A, low, mid, high);
+		int crossSum = findMaxCrossSubarray(A, low, mid, high);
 		
 		if(leftSum >= rightSum && leftSum >= crossSum) {
 			return leftSum;
