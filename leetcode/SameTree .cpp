@@ -19,13 +19,23 @@ Two binary trees are considered equal if they are structurally identical and the
  */
 class Solution {
 public:
-    int maxDepth(TreeNode *root) {
-        int depth = 0;
-        if(root != NULL) {
-            int left = maxDepth(root->left);
-            int right = maxDepth(root->right);
-            depth = (left > right ? left : right) + 1; 
+    bool isSameTree(TreeNode *p, TreeNode *q) {
+        if (p == NULL && q == NULL) {
+            return true;
+        } else if(p == NULL || q == NULL) {
+            return false;
         }
-        return depth;
+
+        if (p->val != q->val) {
+            return false;
+        } 
+        if (!isSameTree(p->left, q->left)) {
+            return false;
+        }
+        if (!isSameTree(p->right, q->right)) {
+            return false;
+        }
+        
+        return true;
     }
 };
