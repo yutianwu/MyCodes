@@ -75,7 +75,7 @@ void decreaseKey(vector<Node> &Q, int i, int key) {
 		return;
 	}
 
-	Q[i-1].key = key;
+	Q[i-1].key = key;	
 	while (i > 1 && Q[i/2 - 1].key > key) {
 		swap(Q[i- 1], Q[i/2 - 1]);
 		i = i/2;
