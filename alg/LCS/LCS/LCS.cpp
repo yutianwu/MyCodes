@@ -7,7 +7,6 @@ using namespace std;
 #define LEFT   2
 #define UP     3
 
-
 void LCSLength(vector<char> &X, vector<char> &Y, vector<vector<int>> &b) {
 	int m = (int) X.size();
 	int n = (int) Y.size();
@@ -31,10 +30,10 @@ void LCSLength(vector<char> &X, vector<char> &Y, vector<vector<int>> &b) {
 			} else {
 				if (c[i][j-1] > c[i-1][j]) {
 					c[i][j] = c[i][j-1];
-					b[i][j] = UP;
+					b[i][j] = LEFT;
 				} else {
 					c[i][j] = c[i-1][j];
-					b[i][j] = LEFT;
+					b[i][j] = UP;
 				}
 			}
 		}
