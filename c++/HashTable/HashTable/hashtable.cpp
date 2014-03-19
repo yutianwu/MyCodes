@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 template<class E, class K>
@@ -17,9 +17,9 @@ public:
 
 private:
 	int hSearch(const K &k) const;
-	int D;	//É¢ÁÐµÄ³ýÊý
-	E *ht;  //É¢ÁÐÊý×é
-	bool *empty; //Ò»Î¬Êý×é
+	int D;	//æ•£åˆ—çš„é™¤æ•°
+	E *ht;  //æ•£åˆ—æ•°ç»„
+	bool *empty; //ä¸€ç»´æ•°ç»„
 };
 
 template<class E, class K>

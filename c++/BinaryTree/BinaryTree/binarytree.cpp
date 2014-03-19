@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <vector>
 using namespace std;
 
@@ -10,7 +10,7 @@ struct TreeNode {
 
 void CreateTree(TreeNode *&root) {
 	int value;
-	cout<<"ÇëÊäÈë½ÚµãÊý×Ö:";
+	cout<<"è¯·è¾“å…¥èŠ‚ç‚¹æ•°å­—:";
 	cin>>value;
 	if (value == -1) {
 		root = NULL;
@@ -75,12 +75,12 @@ void LevelVist(TreeNode *&root) {
 void main() {
 	TreeNode *root;
 	CreateTree(root);
-	cout<<"Ç°Ðò±éÀú£º";
+	cout<<"å‰åºéåŽ†ï¼š";
 	PreOrderVisit(root);
-	cout<<"\nÖÐÐò±éÀú£º";
+	cout<<"\nä¸­åºéåŽ†ï¼š";
 	PostOrderVisit(root);
-	cout<<"\nºóÐò±éÀú£º";
+	cout<<"\nåŽåºéåŽ†ï¼š";
 	InOrderVisit(root);
-	cout<<"\n²ãÐò±éÀú:\n";
+	cout<<"\nå±‚åºéåŽ†:\n";
 	LevelVist(root);
 }

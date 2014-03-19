@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 template <class T> 
@@ -107,7 +107,7 @@ Chain<T> &Chain<T>::Delete(int k, T &x) {
 			q->link = p->link;
 			x = p->data;
 			delete p;
-			return *this; //thisÖ¸ÕëµÄ½âÒıÓÃ£¬ ¼´Chain
+			return *this; //thisæŒ‡é’ˆçš„è§£å¼•ç”¨ï¼Œ å³Chain
 		}
 	}
 }
@@ -116,7 +116,7 @@ template<class T>
 Chain<T> &Chain<T>::Insert(int k, const T&x) {
 	if (k < 0) throw OutOfBounds();
 	ChainNode<T> *p = first;
-	for (int index = 1; index < k && p; index ++) { //×¢ÒâµÄÊÇindex < k
+	for (int index = 1; index < k && p; index ++) { //æ³¨æ„çš„æ˜¯index < k
 		p = p->link;
 	}
 	if (k >0 && !p) {

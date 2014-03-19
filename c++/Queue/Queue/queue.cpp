@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 template<class T>
@@ -13,7 +13,7 @@ public:
 	bool IsEmpty() const {
 		return front == rear;
 	}
-	//¶ÓÁĞÊı×é²»ÄÜÂú
+	//é˜Ÿåˆ—æ•°ç»„ä¸èƒ½æ»¡
 	bool IsFull() const {
 		return ((rear+1)%MaxSize == front) ? 1 : 0;
 	}

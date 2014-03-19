@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 using namespace std;
 
 template<class T>
@@ -31,7 +31,7 @@ template<class T>
 Stack<T>::Stack(int MaxStackSize) {
 	MaxTop = MaxStackSize - 1;
 	stack = new T[MaxStackSize];
-	top = -1;  //ע�� topΪ-1
+	top = -1;  //注意 top为-1
 }
 
 template<class T>
