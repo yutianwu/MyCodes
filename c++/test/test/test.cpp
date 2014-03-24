@@ -1,6 +1,32 @@
 #include <iostream>
 using namespace std;
 
+class Solution {
+public:
+    double pow(double x, int n) {
+        if (equal(x, 0.0) && n < 0) {
+            throw runtime_error("invalid input");
+        }
+        if (n < 0 ) return 1.0 / power(x, n * (-1));
+        return power(x,n);
+    }
+private:
+    double power(double x, unsigned int n) {
+        if (n == 0) return 1;
+        if (n == 1) return x;
+        double half = power(x, n >> 1);
+        if (n & 0x1) return half*half*x;
+        return half * half;
+    }
+    bool equal(double x, double y) {
+        if ( (x - y > -0.000001) && (x - y < 0.000001) ) {
+            return true;
+        }
+        return false;
+
+    }
+};
+
 int partition(int *A, int begin, int end) {
 	int key = A[end];
 	int i = begin - 1;
@@ -27,9 +53,6 @@ void qsort(int *A, int begin, int end) {
 }
 
 void main () {
-	int a[] = {5,4,3,2,1};
-	qsort(a, 0, 4);
-	for(int i = 0; i < 5; i++) {
-		cout<<a[i]<<endl;
-	}
+	Solution sol;
+	sol.pow(1.00000, -2147483648);
 }

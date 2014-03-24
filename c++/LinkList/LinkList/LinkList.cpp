@@ -8,27 +8,25 @@ struct Node {
 }; 
 
 Node *create() {
-	Node *p1, *p2, *head;
+	Node *head = NULL;
 
 	int num;
 	cin>>num; 
 	if (num == 0) {
-		return NULL;
-	} else {
-		p1 = new Node();
-		p1->num = num;
-		head = p1;
-	}
+		return head;
+	} 
+	head = new Node();
+	head->num = num;
+	Node *p = head;
 
-	while (true) {
-		cin>>num;
+	while (cin >> num) {
 		if (num == 0) {
 			return head;
 		}
-		p2 = new Node();
-		p2->num = num;
-		p1->next = p2;
-		p1 = p1->next;
+		Node *temp = new Node();
+		temp->num = num;
+		p->next = temp;
+		p = p->next;
 	}
 }
 
